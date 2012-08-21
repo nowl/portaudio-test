@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <portaudio.h>
-
 #include "audio.h"
 
 #define NUM_SECONDS (2)
@@ -22,12 +20,12 @@ int main(int argc, char *argv[])
     sound_play_seconds(sp2, 1.5);
     //sound_play_seconds(sp3, 1.5);
 
-    Pa_Sleep(1.5*1000);
+    audio_sleep(1.5*1000);
 
-    sp2 = sg_create_sound_params(SQUARE, sg_create_square_wave_parameters(440, 0.5, SAMPLE_RATE));
-    sound_play_seconds(sp2, 1);
+    //sp2 = sg_create_sound_params(SQUARE, sg_create_square_wave_parameters(440, 0.5, SAMPLE_RATE));
+    //sound_play_seconds(sp2, 1);
     
-    Pa_Sleep(1*1000);
+    //audio_sleep(1*1000);
 
     //sw1.setFrequency(300);
 

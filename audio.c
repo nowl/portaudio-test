@@ -177,3 +177,8 @@ int audio_shutdown()
 
     return 0;
 }
+
+void audio_sleep(float ms)
+{
+    Pa_Sleep(ms);
+}

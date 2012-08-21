@@ -16,8 +16,9 @@ int audio_pa_callback(const void *inputBuffer, void *outputBuffer,
                       PaStreamCallbackFlags statusFlags,
                       void *userData);
 
-int audio_init();
-int audio_create_stream(int sample_rate);
-int audio_shutdown();
+int  audio_init();
+int  audio_create_stream(int sample_rate);
+void audio_sleep(float ms);
+int  audio_shutdown();
 
 #endif  /* __AUDIO_H__ */
